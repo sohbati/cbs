@@ -1,13 +1,13 @@
-package com.cbs.accounting.journal;
+package com.cbs.accounting.ledger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoreBankingAccountingJournalEntryServiceApplication {
+public class AccountingLedgerServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoreBankingAccountingJournalEntryServiceApplication.class, args);
+		SpringApplication.run(AccountingLedgerServiceApplication.class, args);
 	}
 
 }
