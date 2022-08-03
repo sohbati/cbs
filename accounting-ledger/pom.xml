@@ -8,8 +8,8 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cbs.accounting.journal</groupId>
-	<artifactId>accounting-journal</artifactId>
+	<groupId>com.sina.cbs</groupId>
+	<artifactId>accounting-ledger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Core Banking Accounting Journal Entry Service</name>
 	<description>Core Banking Accounting Journal Entry Service</description>
