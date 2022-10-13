@@ -1,0 +1,26 @@
+{
+    "exp": 1665704534,
+    "iat": 1665668534,
+    "jti": "c3c47db5-8220-447b-9c9d-14126d5927c1",
+    "iss": "http://localhost:8080/realms/spring-boot-keycloak",
+    "aud": "cbs-information-service",
+    "sub": "3eb10bc8-330b-40fa-b90a-c3fd3ce24e97",
+    "typ": "Bearer",
+    "azp": "cbs-information-service",
+    "authorization": {
+      "permissions": [
+        {
+          "rsid": "1fbd0735-81a9-4044-8d0b-8e3182c5dd74",
+          "rsname": "party"
+        },
+        {
+          "scopes": [
+            "view"
+          ],
+          "rsid": "fd197298-b9bf-48c1-a85f-bd6c59387b26",
+          "rsname": "office"
+        }
+      ]
+    },
+    "scope": ""
+  }

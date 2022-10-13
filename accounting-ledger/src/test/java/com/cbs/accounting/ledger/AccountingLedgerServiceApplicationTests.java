@@ -3,10 +3,10 @@ package com.cbs.accounting.ledger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class AccountingLedgerServiceApplicationTests {
 
-	@Test
+//	@Test
 	void contextLoads() {
 	}
 

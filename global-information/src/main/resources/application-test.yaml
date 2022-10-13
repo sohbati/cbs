@@ -1,0 +1,24 @@
+server:
+    port: 8081
+spring:
+    datasource:
+        username: sa
+        password:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:testdb
+    h2:
+        console:
+            enabled: true
+keycloak:
+  realm: spring-boot-keycloak
+  auth-server-url: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:8080}
+  ssl-required: external
+  resource: spring-app
+  #It means that authorization will be based on Keycloak realm level roles, and not client roles specific to the Spring Boot application.
+  use-resource-role-mappings: false
+  bearer-only: true
+logging:
+    level:
+        root: info
+        com:
+            sina: trace
