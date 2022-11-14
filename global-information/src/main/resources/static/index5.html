@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    #barchart {
+        background-color: orange;
+        margin :10px auto;
+        width: 800px;
+        height: 400px;
+    }
+
+</style>
+<script src="http://d3js.org/d3.v7.min.js"></script>
+<body>
+    <div id="barchart"> 
+        
+    </div>
+</body>
+
+<script>
+    var w=800;
+    var h=400;
+   var barPadding =  5;
+    var dataset = [5,10,15,20,25,30, 60, 50, 60, 70];
+
+    var svg = d3.select("#barchart")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
+
+    svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr('y', function(d, i) {
+        return h - d  * 5;
+    })
+    .attr('x', function(d, i) {
+        return  i *(w / dataset.length)
+    })
+    .attr("width",function(d) { 
+        return  w/ dataset.length -  barPadding;
+    })
+    .attr("height", function(d) {
+        return d * 5;
+    })
+    .attr('fill', 'gray');      
+    
+    svg.selectAll("text")
+    .data(dataset)
+    .enter()
+    .append("text")
+    .text(function(d) {
+        return d;
+    })
+    .attr('x', function(d, i) {
+        return  i *(w / dataset.length) + 30; 
+    })
+    .attr('y', function(d){
+        return h - d  * 5 + 15;
+
+    })
+    .attr('font-size', 16);
+
+</script>

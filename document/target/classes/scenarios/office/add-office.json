@@ -1,0 +1,16 @@
+{
+    "name": "add-office",
+    "tip": "",
+    "description" : "Add a new office / branch to bank",
+    
+    "components" :[
+        "actor", "ui", "office"
+    ],
+    "messages": [
+        {"start":0, "end": 1, "message": "open office menu and click add "},
+        {"start":0, "end": 0, "message": "display office form and fill defaults"},
+        {"start":0, "end": 1, "message": "fill form and click submit"},
+        {"start":1, "end": 2, "message": "office-service validate input data and create a new office and save "}
+    ]
+
+}
