@@ -1,85 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-  transition: background-color .5s;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/scenario-items.css" rel="stylesheet">
+  <link href="/css/side-nav.css" rel="stylesheet">
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+  <script src="/js/scenario-items.js"></script>
+  <script src="/js/side-nav.js"></script>
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+  <script src="/webjars/jquery/jquery.min.js"></script>
+  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+  <script src="/websocketInteraction.js"></script>
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
 </head>
-<body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Scenario</a>
-  <a href="#">about</a>
-</div>
+<body onload="websocketInteraction.connect()">
 
-<div id="main">
-  <h2>Scenario List</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-</div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="sideNav.closeNav()">&times;</a>
+    <a href="#">Scenario</a>
+    <a href="#">about</a>
+  </div>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="sideNav.openNav()">&#9776;</span>
+    <h2>Scenario List</h2>
+    <input type="text" id="myInput" onkeyup="scenarioItems.filter()" placeholder="Search for names.." title="Type in a name">
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.body.style.backgroundColor = "white";
-}
-</script>
-   
+    <ul id="myUL">
+      <li><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Cindy</a></li>
+    </ul>
+
+  </div>
 </body>
-</html> 
+
+</html>
