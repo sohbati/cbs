@@ -1,0 +1,19 @@
+{
+    "components" : [
+      {
+        "name": "IAM",
+        "description" : "",
+        "descriptionUrl": "[$name]-doc", 
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      },
+      {
+        "name": "party",
+        "description" : "",
+        "descriptionUrl": "[$name]-doc",
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      }
+    ]
+}
+  

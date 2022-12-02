@@ -1,0 +1,14 @@
+// this group components represent Human being interactions with the system
+// for example Teller actor, Loan Officer actor, Mobile-Customer actor and so on
+{
+    "components" : [
+      {
+        "name": "actor",
+        "description" : "Lucy",
+        "descriptionUrl": "", 
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      }
+    ]
+}
+  

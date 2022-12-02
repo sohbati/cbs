@@ -1,0 +1,12 @@
+{
+    "components" : [
+      {
+        "name": "core",
+        "description" : "",
+        "descriptionUrl": "[$name]-doc", 
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      }
+    ]
+}
+  

@@ -11,6 +11,7 @@
     <link href="/css/scenario-items.css" rel="stylesheet">
     <script src="/js/scenario-items-filter.js"></script>
     <script src="/js/scenario-list-management.js"></script>
+    <script src="/js/component-list-management.js"></script>
     <script src="/js/scenario-drawer.js"></script>
     <!--Modal-->
     <script src="/js/modal-management.js"></script>
@@ -70,7 +71,7 @@
     <!--component-context-menu------------------------------------>
     <div id="componentContextMenu" class="component-context-menu" style="display: none">
         <ul class="ul-menu">
-            <li><span>Git info</span></li>
+            <li><span onclick="contextMenu.gitInfo()">Git info</span></li>
             <li><span>Health</span></li>
             <li><span>Properties</span></li>
         </ul>

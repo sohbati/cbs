@@ -1,0 +1,12 @@
+{
+    "components" : [
+      {
+        "name": "fixed-deposit",
+        "description" : "",
+        "descriptionUrl": "[$name]-doc", 
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      }
+    ]
+}
+  
