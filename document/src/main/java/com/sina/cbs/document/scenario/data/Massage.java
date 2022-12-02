@@ -1,4 +1,4 @@
-package com.sina.cbs.document.scenario;
+package com.sina.cbs.document.scenario.data;
 
 
 public class Massage {

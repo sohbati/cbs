@@ -1,4 +1,8 @@
-package com.sina.cbs.document.scenario;
+package com.sina.cbs.document.scenario.service;
+
+import lombok.extern.log4j.Log4j2;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,29 +10,34 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-
-import org.springframework.stereotype.Component;
-
 @Component
+@Log4j2
 public class ScenarioLoader {
 
-    public void loadJsonFiles() throws IOException {
+    private final SimpMessagingTemplate simpMessagingTemplate;
+
+    public ScenarioLoader(SimpMessagingTemplate simpMessagingTemplate) {
+
+        this.simpMessagingTemplate = simpMessagingTemplate;
+    }
+
+    public void loadScenarioJsonFiles() throws IOException {
         // read all files from a resources folder
         try {
-            // files from src/main/resources/json
+            // files from /resources/scenarios
             List<File> result = getAllFilesFromResource("scenarios");
             for (File file : result) {
-                System.out.println("file : " + file);
+                log.info(MessageFormat.format("file : {0}", file));
                 String jsonStr = getStringContent(file);
-                System.out.println(jsonStr);
+                log.info(jsonStr);
+                simpMessagingTemplate.convertAndSend("/topic/scenario", jsonStr);
             }
-
         } catch (URISyntaxException | IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
     }
 

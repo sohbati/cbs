@@ -1,6 +1,6 @@
 {
     "name": "add-office",
-    "tip": "",
+    "tip": "اضافه کردن شعبه یا مرکز ",
     "description" : "Add a new office / branch to bank",
     
     "components" :[

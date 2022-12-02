@@ -1,9 +1,9 @@
-var scenarioItems = {
+var scenarioItemsFilter = {
     filter: function() {
         var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById("myInput");
+        input = document.getElementById("scenarioInput");
         filter = input.value.toUpperCase();
-        ul = document.getElementById("myUL");
+        ul = document.getElementById("scenarioUL");
         li = ul.getElementsByTagName("li");
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName("a")[0];

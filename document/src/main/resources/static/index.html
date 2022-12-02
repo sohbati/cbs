@@ -2,49 +2,80 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/scenario-items.css" rel="stylesheet">
-  <link href="/css/side-nav.css" rel="stylesheet">
-
-  <script src="/js/scenario-items.js"></script>
-  <script src="/js/side-nav.js"></script>
-
-  <script src="/webjars/jquery/jquery.min.js"></script>
-  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-  <script src="/websocketInteraction.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SIDE NAV-->
+    <link href="/css/side-nav.css" rel="stylesheet">
+    <script src="/js/side-nav.js"></script>
+    <!--Scenarios-->
+    <link href="/css/scenario-items.css" rel="stylesheet">
+    <script src="/js/scenario-items-filter.js"></script>
+    <script src="/js/scenario-list-management.js"></script>
+    <script src="/js/scenario-drawer.js"></script>
+    <!--Modal-->
+    <script src="/js/modal-management.js"></script>
+    <link href="/css/modal.css" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--Jquery-->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <!--  Websocket-->
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <!--websocket Interaction------------------------------------->
+    <script src="/js/websocketInteraction.js"></script>
+    <!-- D3   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!--context-menu-->
+    <script src="/js/context-menu.js"></script>
+    <link href="/css/context-menu.css" rel="stylesheet">
 
 
 </head>
 
 <body onload="websocketInteraction.connect()">
 
-  <div id="mySidenav" class="sidenav">
+<!--Side-nav ------------------------------------->
+<div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="sideNav.closeNav()">&times;</a>
     <a href="#">Scenario</a>
     <a href="#">about</a>
-  </div>
+</div>
 
-  <div id="main">
+<div id="main">
+    <!--Side-nav opener------------------------------------->
     <span style="font-size:30px;cursor:pointer" onclick="sideNav.openNav()">&#9776;</span>
+
+    <!--Load Scenarios Button------------------------------------->
+    <div style="width: 50%; margin: 0 auto;">
+        <button class="button" onclick="websocketInteraction.callForScenarios()">Load Scenarios</button>
+    </div>
+
+    <!--Scenario List------------------------------------->
     <h2>Scenario List</h2>
-    <input type="text" id="myInput" onkeyup="scenarioItems.filter()" placeholder="Search for names.." title="Type in a name">
-
-    <ul id="myUL">
-      <li><a href="#">Adele</a></li>
-      <li><a href="#">Agnes</a></li>
-
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
+    <input type="text" id="scenarioInput" onkeyup="scenarioItemsFilter.filter()" placeholder="Search for scenarios..."
+           title="Type in a scenario name">
+    <ul id="scenarioUL">
     </ul>
 
-  </div>
+    <!--Modal For display drown scenario------------------------------------>
+    <div id="scenarioModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span onclick="modalManagement.close()" class="close">&times;</span>
+            <div id="drawArea"></div>
+        </div>
+
+    </div>
+    <!--Context-Menu------------------------------------>
+    <div id="contextMenu" class="context-menu" style="display: none">
+        <ul class="ul-menu">
+            <li><a href="#"> Share</a></li>
+            <li><a href="#"> Rename</a></li>
+            <li><a href="#"> Copy Link Address</a></li>
+        </ul>    </div>
+
+</div>
 </body>
 
 </html>
