@@ -1,4 +1,4 @@
-.context-menu {
+.component-context-menu {
     z-index: 999999; /* Sit on top */
     position: absolute;
 }
@@ -11,7 +11,7 @@
     padding: 10px 0;
     list-style-type: none;
 }
-.ul-menu > li > a {
+.ul-menu > li > span {
     font: inherit;
     border: 0;
     padding: 10px 30px 10px 15px;
@@ -28,13 +28,13 @@
     -ms-transition: 0.5s linear;
     -o-transition: 0.5s linear;
 }
-.ul-menu > li > a:hover {
+.ul-menu > li > span:hover {
     background:#f1f3f7;
     color: #4b00ff;
 }
-.ul-menu > li > a > i {
+.ul-menu > li > span > i {
     padding-right: 10px;
 }
-.ul-menu > li.trash > a:hover {
+.ul-menu > li.trash > span:hover {
     color: red;
 }

@@ -11,6 +11,7 @@
     <link href="/css/scenario-items.css" rel="stylesheet">
     <script src="/js/scenario-items-filter.js"></script>
     <script src="/js/scenario-list-management.js"></script>
+    <script src="/js/component-list-management.js"></script>
     <script src="/js/scenario-drawer.js"></script>
     <!--Modal-->
     <script src="/js/modal-management.js"></script>
@@ -26,9 +27,9 @@
     <script src="/js/websocketInteraction.js"></script>
     <!-- D3   -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <!--context-menu-->
+    <!--component-context-menu-->
     <script src="/js/context-menu.js"></script>
-    <link href="/css/context-menu.css" rel="stylesheet">
+    <link href="/css/component-context-menu.css" rel="stylesheet">
 
 
 </head>
@@ -67,13 +68,14 @@
         </div>
 
     </div>
-    <!--Context-Menu------------------------------------>
-    <div id="contextMenu" class="context-menu" style="display: none">
+    <!--component-context-menu------------------------------------>
+    <div id="componentContextMenu" class="component-context-menu" style="display: none">
         <ul class="ul-menu">
-            <li><a href="#"> Share</a></li>
-            <li><a href="#"> Rename</a></li>
-            <li><a href="#"> Copy Link Address</a></li>
-        </ul>    </div>
+            <li><span onclick="contextMenu.gitInfo()">Git info</span></li>
+            <li><span>Health</span></li>
+            <li><span>Properties</span></li>
+        </ul>
+    </div>
 
 </div>
 </body>

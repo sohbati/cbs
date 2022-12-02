@@ -9,16 +9,17 @@ import java.io.IOException;
 @Service
 @Log4j2
 public class ScenarioService {
-    private final ScenarioLoader scenarioLoader;
+    private final ScenarioAndComponentLoader scenarioLoader;
 
-    public ScenarioService(ScenarioLoader scenarioLoader) {
+    public ScenarioService(ScenarioAndComponentLoader scenarioLoader) {
         this.scenarioLoader = scenarioLoader;
     }
 
     @Async
     public void sendScenariosToPanelViaWebsocket() {
         try {
-            scenarioLoader.loadScenarioJsonFiles();
+            scenarioLoader.sendScenarioListToPanelViaWebsocket();
+            scenarioLoader.sendComponentsListToPanelViaWebsocket();
         } catch (IOException e) {
             log.error("Error in loading files");
             log.error(e.getMessage(), e);

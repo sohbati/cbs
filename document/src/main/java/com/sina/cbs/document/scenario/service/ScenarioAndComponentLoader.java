@@ -16,25 +16,33 @@ import java.util.stream.Collectors;
 
 @Component
 @Log4j2
-public class ScenarioLoader {
+public class ScenarioAndComponentLoader {
 
     private final SimpMessagingTemplate simpMessagingTemplate;
 
-    public ScenarioLoader(SimpMessagingTemplate simpMessagingTemplate) {
+    public ScenarioAndComponentLoader(SimpMessagingTemplate simpMessagingTemplate) {
 
         this.simpMessagingTemplate = simpMessagingTemplate;
     }
 
-    public void loadScenarioJsonFiles() throws IOException {
+    public void sendScenarioListToPanelViaWebsocket() throws IOException {
+       collectFilesAndSend("scenarios", "scenario");
+    }
+
+    public void sendComponentsListToPanelViaWebsocket() {
+        collectFilesAndSend("components", "components");
+    }
+
+    private void collectFilesAndSend(String folder, String topic) {
         // read all files from a resources folder
         try {
             // files from /resources/scenarios
-            List<File> result = getAllFilesFromResource("scenarios");
+            List<File> result = getAllFilesFromResource(folder);
             for (File file : result) {
                 log.info(MessageFormat.format("file : {0}", file));
                 String jsonStr = getStringContent(file);
                 log.info(jsonStr);
-                simpMessagingTemplate.convertAndSend("/topic/scenario", jsonStr);
+                simpMessagingTemplate.convertAndSend("/topic/" + topic, jsonStr);
             }
         } catch (URISyntaxException | IOException e) {
             log.error(e.getMessage(), e);
@@ -55,6 +63,7 @@ public class ScenarioLoader {
 
     // print a file
     private  String getStringContent(File file) throws IOException {
-         return Files.readString(file.toPath());
+         return Files.readString(file.toPath()).replaceAll(
+                 "(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
     }
 }

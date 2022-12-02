@@ -24,6 +24,10 @@ var websocketInteraction = {
                 scenarioListManagement.addToList(scenario);
              //   showGreeting(JSON.parse(greeting.body).content);
             });
+            parent.stompClient.subscribe('/topic/components', function (components) {
+                console.log(components);
+                componentListManagement.addToList(components);
+            });
         });
     },
 
@@ -33,10 +37,6 @@ var websocketInteraction = {
         }
         this.setConnected(false);
         console.log("Disconnected");
-    },
-
-    showGreeting: function (message) {
-        $("#greetings").append("<tr><td>" + message + "</td></tr>");
     },
 
     callForScenarios() {

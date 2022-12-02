@@ -1,0 +1,12 @@
+{
+    "components" : [
+      {
+        "name": "loan",
+        "description" : "",
+        "descriptionUrl": "[$name]-doc", 
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
+      }
+    ]
+}
+  
