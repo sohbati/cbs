@@ -75,8 +75,10 @@ const scenarioDrawer = {
 // Draw message arrows
         scenario.messages.forEach(function (m, i) {
             var y = YPAD + MESSAGE_ARROW_Y_OFFSET + i * MESSAGE_SPACE;
+            const messageColor = m.type === 'REST' ? 'blue' : 'red';
             var line = svg.append("line")
-                .style("stroke", "black")
+                .style("stroke", messageColor)
+                .style("stroke-width", 1.5)
                 .attr("x1", XPAD + m.start * VERT_SPACE)
                 .attr("y1", y)
                 .attr("x2", XPAD + m.end * VERT_SPACE)
