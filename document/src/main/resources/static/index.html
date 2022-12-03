@@ -50,6 +50,12 @@
     <!--Load Scenarios Button------------------------------------->
     <div style="width: 50%; margin: 0 auto;">
         <button class="button" onclick="websocketInteraction.callForScenarios()">Load Scenarios</button>
+        <span style="width: 50px"></span>
+        <select id="environmentsList" style="margin-left: 40px">
+            <option value="http://localhost">Localhost service</option>
+            <option value="http://sit.server-domain.com:41233">SIT environment</option>
+            <option value="http://uat.server-domain.com:101010">UAT service</option>
+        </select>
     </div>
 
     <!--Scenario List------------------------------------->
@@ -72,7 +78,7 @@
     <div id="componentContextMenu" class="component-context-menu" style="display: none">
         <ul class="ul-menu">
             <li><span onclick="contextMenu.gitInfo()">Git info</span></li>
-            <li><span>Health</span></li>
+            <li><span onclick="contextMenu.health()">Health</span></li>
             <li><span>Properties</span></li>
         </ul>
     </div>

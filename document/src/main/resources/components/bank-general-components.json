@@ -1,19 +1,22 @@
 {
     "components" : [
       {
-        "name": "global-information",
+        "name": "global-information-service",
+        "contextPath": "/global-information",
         "description" : "General Ledger / Office list / Currency List / Product List / State and city list / Bank global information",
-        "descriptionUrl": "[$name]-doc", 
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api",
-        "gitInfoUrl" : "[$name]/git/info"
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/open-api",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/actuator/health",
+        "localhostPort": 8081
       }, {
         "name": "scheduler",
+        "contextPath": "/scheduler",
         "description" : "",
-        "descriptionUrl": "[$name]-doc", 
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api",
-        "gitInfoUrl" : "[$name]/git/info"
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/open-api",
+        "gitInfoURI" : "/info",
+        "localhostPort": 8082
       }
     ]
 }

@@ -8,6 +8,12 @@
         "descriptionUrl": "", 
         "iconUrl": "[$name]-icon",
         "openApiUrl": "[$name]/open-api"
+      },{
+        "name": "UI",
+        "description" : "UI",
+        "descriptionUrl": "",
+        "iconUrl": "[$name]-icon",
+        "openApiUrl": "[$name]/open-api"
       }
     ]
 }

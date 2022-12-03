@@ -25,8 +25,34 @@ const contextMenu = {
         const id = $("#componentContextMenu")[0].rightClickedComponent;
         const componentName = id.substr(10, id.length);
         const component = this.getComponentByName(componentName);
+        if (!component) {
+            alert("The Component [" + componentName + "]details not found");
+            return;
+        }
+        const serviceURL = this.getServiceURL(component) +component.gitInfoURI;
+        window.open(serviceURL, "_blank", "");
+    },
 
-        document.open('blank', component.gitInfourl);
+    health: function () {
+        const id = $("#componentContextMenu")[0].rightClickedComponent;
+        const componentName = id.substr(10, id.length);
+        const component = this.getComponentByName(componentName);
+        if (!component) {
+            alert("The Component [" + componentName + "]details not found");
+            return;
+        }
+        const serviceURL = this.getServiceURL(component) +component.healthURI;
+        window.open(serviceURL, "_blank", "");
+    },
+
+    getServiceURL: function (component) {
+        const envSelect = $("#environmentsList")[0];
+        let selectedItem = envSelect.options[envSelect.selectedIndex].value;
+        if (selectedItem.includes("localhost")) {
+            selectedItem += ":" +  component.localhostPort;
+        }
+        selectedItem += component.contextPath;
+        return selectedItem;
     },
 
     getComponentByName: function (name) {
