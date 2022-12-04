@@ -77,8 +77,9 @@
     <!--component-context-menu------------------------------------>
     <div id="componentContextMenu" class="component-context-menu" style="display: none">
         <ul class="ul-menu">
-            <li><span onclick="contextMenu.gitInfo()">Git info</span></li>
-            <li><span onclick="contextMenu.health()">Health</span></li>
+            <li><span onclick="contextMenu.contextMenuItem_selectToOpenNewWindow('gitInfo')">Git info</span></li>
+            <li><span onclick="contextMenu.contextMenuItem_selectToOpenNewWindow('health')">Health</span></li>
+            <li><span onclick="contextMenu.contextMenuItem_selectToOpenNewWindow('open-api')">Open API</span></li>
             <li><span>Properties</span></li>
         </ul>
     </div>

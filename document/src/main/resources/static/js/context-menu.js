@@ -21,7 +21,7 @@ const contextMenu = {
         }
     },
 
-    gitInfo: function () {
+    contextMenuItem_selectToOpenNewWindow(item) {
         const id = $("#componentContextMenu")[0].rightClickedComponent;
         const componentName = id.substr(10, id.length);
         const component = this.getComponentByName(componentName);
@@ -29,19 +29,15 @@ const contextMenu = {
             alert("The Component [" + componentName + "]details not found");
             return;
         }
-        const serviceURL = this.getServiceURL(component) +component.gitInfoURI;
-        window.open(serviceURL, "_blank", "");
-    },
 
-    health: function () {
-        const id = $("#componentContextMenu")[0].rightClickedComponent;
-        const componentName = id.substr(10, id.length);
-        const component = this.getComponentByName(componentName);
-        if (!component) {
-            alert("The Component [" + componentName + "]details not found");
-            return;
+        let serviceURL = this.getServiceURL(component);
+        if (item == 'gitInfo') {
+            serviceURL +=  component.gitInfoURI;
+        }else if (item == 'health') {
+            serviceURL +=  component.healthURI;
+        }else if (item == 'open-api') {
+            serviceURL +=  component.openApiURI;
         }
-        const serviceURL = this.getServiceURL(component) +component.healthURI;
         window.open(serviceURL, "_blank", "");
     },
 
