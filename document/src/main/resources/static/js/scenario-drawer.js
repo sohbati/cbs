@@ -7,11 +7,13 @@ const scenarioDrawer = {
 
         const XPAD = 50;
         const YPAD = 20;
-        const VERT_SPACE = 100;
+
+        const CLASS_WIDTH = scenarioDrawerHelper.getComponentRectWidth(scenario);
+        const CLASS_HEIGHT = 40;
+
+        const VERT_SPACE = 100 + CLASS_WIDTH;
         const VERT_PAD = 60;
 
-        const CLASS_WIDTH = 80;
-        const CLASS_HEIGHT = 40;
         const CLASS_LABEL_X_OFFSET = -25;
         const CLASS_LABEL_Y_OFFSET = 25;
 
