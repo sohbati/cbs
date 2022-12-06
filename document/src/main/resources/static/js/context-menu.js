@@ -46,8 +46,8 @@ const contextMenu = {
         let selectedItem = envSelect.options[envSelect.selectedIndex].value;
         if (selectedItem.includes("localhost")) {
             selectedItem += ":" +  component.localhostPort;
-        }
-        selectedItem += component.contextPath;
+        }else
+            selectedItem += component.contextPath;
         return selectedItem;
     },
 

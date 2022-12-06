@@ -5,9 +5,9 @@
         "contextPath": "/global-information",
         "description" : "General Ledger / Office list / Currency List / Product List / State and city list / Bank global information",
         "iconURI": "/iconFile.icon",
-        "openApiURI": "/open-api",
+        "openApiURI": "/api-docs",
         "gitInfoURI" : "/info",
-        "healthURI" : "/actuator/health",
+        "healthURI" : "/manage/health",
         "localhostPort": 8081
       }, {
         "name": "scheduler",

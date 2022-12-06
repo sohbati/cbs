@@ -2,13 +2,26 @@ server:
     port: 8081
 spring:
     datasource:
-        username: sa
-        password:
-        driver-class-name: org.h2.Driver
-        url: jdbc:h2:mem:testdb
-    h2:
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:testdb
+      h2:
         console:
             enabled: true
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+    version: openapi_3_1
+management:
+  endpoints:
+    web:
+      base-path: /manage
+    enabled-by-default: true
+
+
+
 keycloak:
   realm: spring-boot-keycloak
   auth-server-url: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:8080}
