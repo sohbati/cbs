@@ -114,6 +114,9 @@ const scenarioDrawer = {
                 .attr('y', yPos -15)
                 .attr('width', 20)
                 .attr('height', 24)
+                .attr('id', function (ی) {
+                    return scenarioName + "@" + m.uniqueId;
+                })
                 .attr("class", "message-event")
                 .attr("xlink:href", "icon/ex-mark.png")
         });
@@ -122,7 +125,6 @@ const scenarioDrawer = {
         svg.append("svg:defs").selectAll("marker")
             .data(["end"])
             .enter().append("svg:marker")
-            .attr("class", "message-event")
             .attr("id", String)
             .attr("viewBox", "0 -5 10 10")
             .attr("refX", 10)
@@ -133,10 +135,12 @@ const scenarioDrawer = {
             .append("svg:path")
             .attr("d", "M0,-5L10,0L0,5");
 
-        const messages =$('.message-event');
-        for(const elm of messages) {
-            elm.ondblclick = function () {
-                console.log('clicked');
+        const messagesClass =$('.message-event');
+        for(const elm of messagesClass) {
+            elm.ondblclick = function (e) {
+                const scenarioName = e.target.id.split("@")[0];
+                const messageId = parseInt(e.target.id.split("@")[1]);
+                scenarioListManagement.showOpenApiOfClickedMessage(scenarioName, messageId);
             };
         };
 

@@ -13,10 +13,55 @@ var scenarioListManagement = {
     },
 
     addToUI(name, displayName, title) {
-        $("#scenarioUL").append(`<li><span onclick="modalManagement.open('${name}')" title="${title}">${displayName}</span></li>`);
+        $("#scenarioUL").append(`<li><span onclick="scenarioDrawerModalManagement.open('${name}')" title="${title}">${displayName}</span></li>`);
     },
 
     getSelectedScenario: function (name) {
         return this.list.find(element =>element.name === name);
     },
+
+    getTargetComponentNameByMessageId: function (scenario, messageId) {
+        let componentIndex = -1;
+        for(const msg of scenario.messages) {
+            if (msg.uniqueId === messageId) {
+                componentIndex = msg.end;
+            }
+        }
+        if (componentIndex <0 ) {
+            alert(" problem in defining messages in scenario");
+            return
+        }
+        return scenario.components[componentIndex];
+    },
+
+    showOpenApiURLForMessageByMessageId: function (component, scenario, message) {
+        const url = componentListManagement.getServiceURL(component) + component.openApiURI + "#" + message.data.apiURI;
+        window.open(url, "_blank", "");
+    },
+
+    showTextForMessageByMessageId: function (message) {
+        alert(message.data.text);
+    },
+
+    getMessage: function (scenario, messageId) {
+        for(const msg of scenario.messages) {
+            if (msg.uniqueId === messageId) {
+                return msg;
+            }
+        }
+        return null;
+    },
+
+    showOpenApiOfClickedMessage: function (scenarioName, messageId) {
+       const scenario = this.getSelectedScenario(scenarioName);
+       const componentName = this.getTargetComponentNameByMessageId(scenario, messageId);
+       const component = componentListManagement.getSelectedComponent(componentName);
+       const message = this.getMessage(scenario, messageId);
+       switch (message.data.type) {
+           case "api-link" :this.showOpenApiURLForMessageByMessageId(component, scenario, message);
+           break;
+           case "text" : this.showTextForMessageByMessageId(message);
+           break;
+       }
+    }
 }

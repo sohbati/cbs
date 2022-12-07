@@ -5,7 +5,7 @@
         "contextPath": "/global-information",
         "description" : "General Ledger / Office list / Currency List / Product List / State and city list / Bank global information",
         "iconURI": "/iconFile.icon",
-        "openApiURI": "/api-docs",
+        "openApiURI": "/swagger-ui/index.html",
         "gitInfoURI" : "/info",
         "healthURI" : "/manage/health",
         "localhostPort": 8081

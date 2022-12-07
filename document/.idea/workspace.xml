@@ -5,41 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27769714-6ae3-438b-acd6-998844d02985" name="Changes" comment="add swagger(open-api) to context menu (right click)">
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/DocumentApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/config/WebSocketConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/scenario/api/ScenarioApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/scenario/data/Massage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/scenario/data/Scenario.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/scenario/service/ScenarioAndComponentLoader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/sina/cbs/document/scenario/service/ScenarioService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/actor-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/bank-general-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/core-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/fixed-deposit-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/loan-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/savings-account-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/components/user-iam-customer-party.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/scenarios/office/add-office.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/component-context-menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/scenario-items.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/searchicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/side-nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/component-list-management.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/context-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/modal-management.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/scenario-drawer-helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/scenario-drawer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/scenario-items-filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/scenario-list-management.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/side-nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/websocketInteraction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/scenario-items.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/scenario-items.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/bank-general-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/bank-general-components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/component-list-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/component-list-management.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/context-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/context-menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/modal-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/senario-drawer-modal-management.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/scenario-drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/scenario-drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,20 +57,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/components" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/mysource/cbs/global-information",
+    "spring.configuration.checksum": "fdc3bdefb79cec8eb8211d2499e04704"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/components" />
@@ -130,6 +103,7 @@
       <workItem from="1669237111318" duration="12869000" />
       <workItem from="1669308817237" duration="47286000" />
       <workItem from="1670172445325" duration="12356000" />
+      <workItem from="1670395273719" duration="12320000" />
     </task>
     <task id="LOCAL-00001" summary="add type to message and color message base on type">
       <created>1670103299142</created>

@@ -30,7 +30,7 @@ const contextMenu = {
             return;
         }
 
-        let serviceURL = this.getServiceURL(component);
+        let serviceURL = componentListManagement.getServiceURL(component);
         if (item == 'gitInfo') {
             serviceURL +=  component.gitInfoURI;
         }else if (item == 'health') {
@@ -41,15 +41,7 @@ const contextMenu = {
         window.open(serviceURL, "_blank", "");
     },
 
-    getServiceURL: function (component) {
-        const envSelect = $("#environmentsList")[0];
-        let selectedItem = envSelect.options[envSelect.selectedIndex].value;
-        if (selectedItem.includes("localhost")) {
-            selectedItem += ":" +  component.localhostPort;
-        }else
-            selectedItem += component.contextPath;
-        return selectedItem;
-    },
+
 
     getComponentByName: function (name) {
         return componentListManagement.getSelectedComponent(name);

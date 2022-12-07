@@ -16,9 +16,18 @@ const componentListManagement = {
             });
         }
     },
-    
 
     getSelectedComponent: function (name) {
         return this.list.find(element =>element.name === name);
+    },
+
+    getServiceURL: function (component) {
+        const envSelect = $("#environmentsList")[0];
+        let selectedItem = envSelect.options[envSelect.selectedIndex].value;
+        if (selectedItem.includes("localhost")) {
+            selectedItem += ":" +  component.localhostPort;
+        }else
+            selectedItem += component.contextPath;
+        return selectedItem;
     },
 }

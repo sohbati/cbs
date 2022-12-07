@@ -1,4 +1,4 @@
-const modalManagement = {
+const scenarioDrawerModalManagement = {
     open: function (name) {
        scenarioDrawer.draw(name);
         $("#scenarioModal")[0].style.display = "block";
