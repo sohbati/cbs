@@ -22,7 +22,7 @@ const scenarioDrawer = {
         const MESSAGE_LABEL_Y_OFFSET = 70;
         const MESSAGE_ARROW_Y_OFFSET = 80;
 
-        const CANVAS_WIDTH = 800;
+        const CANVAS_WIDTH = 1500;
         const CANVAS_HEIGHT = 600;
 
         //clear up first
@@ -35,22 +35,23 @@ const scenarioDrawer = {
 
 // Draw vertical lines
         scenario.components.forEach(function (c, i) {
+            const x = XPAD + i * VERT_SPACE + CLASS_WIDTH /2;
             var line = svg.append("line")
                 .style("stroke", "#888")
-                .attr("x1", XPAD + i * VERT_SPACE)
+                .attr("x1", x)
                 .attr("y1", YPAD)
-                .attr("x2", XPAD + i * VERT_SPACE)
+                .attr("x2", x)
                 .attr("y2", YPAD + VERT_PAD + scenario.messages.length * MESSAGE_SPACE);
         });
 
 // Draw scenario.components
         scenario.components.forEach(function (c, i) {
-            var x = XPAD + i * VERT_SPACE;
-            var g1 = svg.append("g")
+            const x = XPAD + i * VERT_SPACE;
+            const g1 = svg.append("g")
                 .attr("transform", "translate(" + x + "," + YPAD + ")")
                 .attr("class", "first")
                 .append("rect")
-                .attr({x: -CLASS_WIDTH / 2, y: 0, width: CLASS_WIDTH, height: CLASS_HEIGHT})
+                .attr({x: 0, y: 0, width: CLASS_WIDTH, height: CLASS_HEIGHT})
                 .attr("id", function(d) {
                     return "component_"+c;
                 })
@@ -59,7 +60,8 @@ const scenarioDrawer = {
 
 // Draw class labels
         scenario.components.forEach(function (c, i) {
-            var x = XPAD + i * VERT_SPACE;
+            const centerTheText = (CLASS_WIDTH/2) - ((c.length *8) /2) + 25;
+            var x = XPAD + i * VERT_SPACE + centerTheText;
             var g1 = svg.append("g")
                 .attr("transform", "translate(" + x + "," + YPAD + ")")
                 .attr("class", "first")
@@ -80,16 +82,19 @@ const scenarioDrawer = {
             const messageColor = m.type === 'REST' ? 'blue' : 'red';
             var line = svg.append("line")
                 .style("stroke", messageColor)
-                .style("stroke-width", 1.5)
-                .attr("x1", XPAD + m.start * VERT_SPACE)
+                .style("stroke-width", 2)
+                .attr("x1", XPAD + m.start * VERT_SPACE + CLASS_WIDTH/2)
                 .attr("y1", y)
-                .attr("x2", XPAD + m.end * VERT_SPACE)
+                .attr("x2", XPAD + m.end * VERT_SPACE + CLASS_WIDTH/2)
                 .attr("y2", y)
                 .attr("marker-end", "url(#end)")
                 .append("text")
                 .text(function (d) {
                     return m.message;
                 });
+            line.onclick = function () {
+                alert('dfasdf');
+            }
         });
 
 // Draw message labels
@@ -98,18 +103,26 @@ const scenarioDrawer = {
             var yPos = YPAD + MESSAGE_LABEL_Y_OFFSET + i * MESSAGE_SPACE;
 
             var g1 = svg.append("g")
-                .attr("transform", "translate(" + xPos + "," + yPos + ")")
+                .attr("transform", "translate(" + (xPos+20) + "," + yPos + ")")
                 .attr("class", "first")
                 .append("text")
                 .text(function (d) {
                     return m.message;
                 });
+            const icon = svg.append("svg:image")
+                .attr('x', xPos-5)
+                .attr('y', yPos -15)
+                .attr('width', 20)
+                .attr('height', 24)
+                .attr("class", "message-event")
+                .attr("xlink:href", "icon/ex-mark.png")
         });
 
 // Arrow style
         svg.append("svg:defs").selectAll("marker")
             .data(["end"])
             .enter().append("svg:marker")
+            .attr("class", "message-event")
             .attr("id", String)
             .attr("viewBox", "0 -5 10 10")
             .attr("refX", 10)
@@ -119,6 +132,14 @@ const scenarioDrawer = {
             .attr("orient", "auto")
             .append("svg:path")
             .attr("d", "M0,-5L10,0L0,5");
+
+        const messages =$('.message-event');
+        for(const elm of messages) {
+            elm.ondblclick = function () {
+                console.log('clicked');
+            };
+        };
+
 
     }
 }
