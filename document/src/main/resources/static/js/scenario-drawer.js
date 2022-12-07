@@ -30,8 +30,8 @@ const scenarioDrawer = {
         // Create a svg canvas
         var svg = d3.select("#drawArea")
             .append("svg")
-            .attr("width", CANVAS_WIDTH)
-            .attr("height", CANVAS_HEIGHT);
+            .attr("width", '100%')
+            .attr("height", '100%');
 
 // Draw vertical lines
         scenario.components.forEach(function (c, i) {
