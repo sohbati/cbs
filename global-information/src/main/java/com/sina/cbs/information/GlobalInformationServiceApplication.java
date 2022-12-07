@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @OpenAPI30
-@OpenAPIDefinition(info = @Info(title = "Employees API", version = "2.0", description = "Employees Information"))
+@OpenAPIDefinition(info = @Info(title = "Bank Global information service API", version = "1.0", description = ""))
 public class GlobalInformationServiceApplication {
 
 	public static void main(String[] args) {

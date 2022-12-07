@@ -29,15 +29,15 @@ public class SecurityInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
-        HandlerMethod hm = null;
-        try {
-            hm = (HandlerMethod) handler;
-        } catch (ClassCastException e) {
-            log.error(e.getMessage(), e);
-            return true;
-        }
-        final Method method = hm.getMethod();
-        AccessRequestRecord accessLevelRecord = getControllerAuthorizationAnnotation(method);
+//        HandlerMethod hm = null;
+//        try {
+//            hm = (HandlerMethod) handler;
+//        } catch (ClassCastException e) {
+//            log.error(e.getMessage(), e);
+//            return true;
+//        }
+//        final Method method = hm.getMethod();
+//        AccessRequestRecord accessLevelRecord = getControllerAuthorizationAnnotation(method);
 
         return true;
 //        return authorizeResourceCall(request, accessLevelRecord);
