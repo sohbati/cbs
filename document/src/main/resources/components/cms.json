@@ -1,0 +1,15 @@
+{
+    "components" : [
+      {
+        "name": "cms",
+        "contextPath": "/cms",
+        "description" : "card management system",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/swagger-ui/index.html",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/manage/health",
+        "localhostPort": 8081
+      }
+    ]
+}
+  

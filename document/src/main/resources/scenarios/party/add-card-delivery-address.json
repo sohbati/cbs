@@ -1,10 +1,10 @@
 {
-    "name": "add-office",
-    "tip": "اضافه کردن شعبه یا مرکز ",
-    "description" : "Add a new office / branch to bank",
+    "name": "add-card-delivery-address",
+    "tip": "اضافه کردن آدرس تحویل کارت مشتری",
+    "description" : "اضافه کردن آدرس تحویل کارت مشتری",
     
     "components" :[
-        "actor", "UI", "global-information-service"
+        "mobile","pfm", "cms", "account", "party"
     ],
     "messages": [
         {"uniqueId":1, "type":"REST", "start":0, "end": 1, "message": "open office menu and click add ",
