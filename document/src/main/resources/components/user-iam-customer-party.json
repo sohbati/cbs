@@ -1,18 +1,26 @@
 {
     "components" : [
       {
+        "type": "service",
         "name": "IAM",
-        "description" : "",
-        "descriptionUrl": "[$name]-doc", 
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api"
+        "contextPath": "/iam",
+        "description" : "Identity and access management",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/open-api",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/manage/health",
+        "localhostPort": 8082
       },
       {
+        "type": "service",
         "name": "party",
-        "description" : "",
-        "descriptionUrl": "[$name]-doc",
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api"
+        "contextPath": "/party",
+        "description" : "customer management system",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/open-api",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/manage/health",
+        "localhostPort": 8082
       }
     ]
 }

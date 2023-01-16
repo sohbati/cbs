@@ -1,14 +1,15 @@
 {
     "components" : [
       {
-        "name": "cms",
-        "contextPath": "/cms",
-        "description" : "card management system",
+        "type": "service",
+        "name": "mib",
+        "contextPath": "/mib",
+        "description" : "mobile backend",
         "iconURI": "/iconFile.icon",
-        "openApiURI": "/swagger-ui/index.html",
+        "openApiURI": "/open-api",
         "gitInfoURI" : "/info",
         "healthURI" : "/manage/health",
-        "localhostPort": 8081
+        "localhostPort": 8082
       }
     ]
 }

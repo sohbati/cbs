@@ -1,15 +1,30 @@
-// this group components represent Human being interactions with the system
-// for example Teller actor, Loan Officer actor, Mobile-Customer actor and so on
 {
     "components" : [
       {
-        "name": "actor",
+        "type": "actor",
+        "name": "financial-back-office",
         "description" : "Lucy",
         "descriptionUrl": "", 
+        "iconUrl": "[$name]-icon"
+      },
+      {
+        "type": "actor",
+        "name": "help-desk-actor",
+        "description" : "Lucy",
+        "descriptionUrl": "",
+        "iconUrl": "[$name]-icon"
+      },
+      {
+        "type": "UI",
+        "name": "core-panel",
+        "description" : "UI",
+        "descriptionUrl": "",
         "iconUrl": "[$name]-icon",
         "openApiUrl": "[$name]/open-api"
-      },{
-        "name": "UI",
+      },
+      {
+        "type": "UI",
+        "name": "crm-panel",
         "description" : "UI",
         "descriptionUrl": "",
         "iconUrl": "[$name]-icon",

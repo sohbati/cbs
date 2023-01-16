@@ -1,0 +1,30 @@
+{
+  "components" : [
+    {
+      "type": "actor",
+      "name": "an-actor-type-name",
+      "description" : "description",
+      "descriptionUrl": "",
+      "iconUrl": "[$name]-icon"
+    },
+    {
+      "type": "UI",
+      "name": "ui-panel",
+      "description" : "UI",
+      "descriptionUrl": "",
+      "iconUrl": "[$name]-icon",
+      "openApiUrl": "[$name]/open-api"
+    },
+    {
+      "type": "service",
+      "name": "service-name",
+      "contextPath": "/service-context-path",
+      "description" : "service description",
+      "iconURI": "/iconFile.icon",
+      "openApiURI": "/swagger-ui/index.html",
+      "gitInfoURI" : "/info",
+      "healthURI" : "/manage/health",
+      "localhostPort": 1234
+    }
+    ]
+}

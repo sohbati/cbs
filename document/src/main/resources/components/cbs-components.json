@@ -2,14 +2,14 @@
     "components" : [
       {
         "type": "service",
-        "name": "cms",
-        "contextPath": "/cms",
-        "description" : "card management system",
+        "name": "core",
+        "contextPath": "/core/fineract-provider",
+        "description" : "core banking system",
         "iconURI": "/iconFile.icon",
         "openApiURI": "/open-api",
         "gitInfoURI" : "/info",
         "healthURI" : "/manage/health",
-        "localhostPort": 8082
+        "localhostPort": 8080
       }
     ]
 }

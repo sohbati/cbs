@@ -1,7 +1,8 @@
 {
     "components" : [
       {
-        "name": "global-information-service",
+        "type": "service",
+        "name": "account",
         "contextPath": "/global-information",
         "description" : "General Ledger / Office list / Currency List / Product List / State and city list / Bank global information",
         "iconURI": "/iconFile.icon",
@@ -9,13 +10,16 @@
         "gitInfoURI" : "/info",
         "healthURI" : "/manage/health",
         "localhostPort": 8081
-      }, {
+      },
+      {
+        "type": "service",
         "name": "scheduler",
         "contextPath": "/scheduler",
         "description" : "",
         "iconURI": "/iconFile.icon",
         "openApiURI": "/open-api",
         "gitInfoURI" : "/info",
+        "healthURI" : "/manage/health",
         "localhostPort": 8082
       }
     ]
