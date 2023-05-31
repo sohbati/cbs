@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27769714-6ae3-438b-acd6-998844d02985" name="Changes" comment="add swagger(open-api) to context menu (right click)">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/components/longbox-components.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/inquiry-product-whatif-list.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="27769714-6ae3-438b-acd6-998844d02985" name="Changes" comment="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-closure.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/actor-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/actor-components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/cbs-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/cbs-components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/channel-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/channel-components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/mobile.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/mobile.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/user-iam-customer-party.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/user-iam-customer-party.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/party/add-card-delivery-address.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/party/add-home-address.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +117,7 @@
       <workItem from="1684820112496" duration="2402000" />
       <workItem from="1684826558416" duration="300000" />
       <workItem from="1684959575549" duration="1035000" />
-      <workItem from="1685003230443" duration="12499000" />
+      <workItem from="1685003230443" duration="14085000" />
     </task>
     <task id="LOCAL-00001" summary="add type to message and color message base on type">
       <created>1670103299142</created>
@@ -143,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670169536176</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario">
+      <created>1685566462713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685566462713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +161,8 @@
     <MESSAGE value="add microseervice list as a components&#10;manage context-menu to show info about microservices like git-info, health and some other descriptions" />
     <MESSAGE value="add type to message and color message base on type" />
     <MESSAGE value="add swagger(open-api) to context menu (right click)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add swagger(open-api) to context menu (right click)" />
+    <MESSAGE value="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

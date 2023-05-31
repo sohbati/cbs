@@ -1,7 +1,7 @@
 {
-    "name": "longbox-fixed-deposit-account-opening",
-    "tip": "ایجاد حساب لانگ باکس - حساب سپرده بلند مدت در قالب باکس",
-    "description" : "longbox-fixed deposit account opennig  ایجاد حساب لانگ باکس - حساب سپرده بلند مدت",
+    "name": "longbox-fixed-deposit-account-closure",
+    "tip": "بستن  حساب لانگ باکس - بستن  سپرده بلند مدت در قالب باکس",
+    "description" : "longbox-fixed deposit account closes  بستن  حساب لانگ باکس - بستن  سپرده بلند مدت",
     
     "components" :[
         "MOBILE","GATEWAY","PFM", "FIXED_DEPOSIT","CORE"
