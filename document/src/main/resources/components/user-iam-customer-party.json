@@ -13,13 +13,13 @@
       },
       {
         "type": "service",
-        "name": "party",
-        "contextPath": "/party",
+        "name": "BLU-PARTY",
+        "contextPath": "/blu-party",
         "description" : "customer management system",
         "iconURI": "/iconFile.icon",
-        "openApiURI": "/open-api",
+        "openApiURI": "/swagger-ui/index.html",
         "gitInfoURI" : "/info",
-        "healthURI" : "/manage/health",
+        "healthURI" : "/health",
         "localhostPort": 8082
       }
     ]

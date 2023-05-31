@@ -2,7 +2,7 @@
     "components" : [
       {
         "type": "service",
-        "name": "core",
+        "name": "CORE",
         "contextPath": "/core/fineract-provider",
         "description" : "core banking system",
         "iconURI": "/iconFile.icon",

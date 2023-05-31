@@ -2,18 +2,18 @@
     "components" : [
       {
         "type": "service",
-        "name": "account",
-        "contextPath": "/global-information",
-        "description" : "General Ledger / Office list / Currency List / Product List / State and city list / Bank global information",
+        "name": "ACCOUNT",
+        "contextPath": "/account",
+        "description" :  "core proxy / savings account openning / handle referral",
         "iconURI": "/iconFile.icon",
         "openApiURI": "/swagger-ui/index.html",
         "gitInfoURI" : "/info",
-        "healthURI" : "/manage/health",
+        "healthURI" : "/health",
         "localhostPort": 8081
       },
       {
         "type": "service",
-        "name": "scheduler",
+        "name": "SCHEDULER",
         "contextPath": "/scheduler",
         "description" : "",
         "iconURI": "/iconFile.icon",

@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27769714-6ae3-438b-acd6-998844d02985" name="Changes" comment="add swagger(open-api) to context menu (right click)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/components/longbox-components.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/inquiry-product-whatif-list.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/components/bank-general-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/bank-general-components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/actor-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/actor-components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/cbs-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/cbs-components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/channel-components.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/channel-components.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/mobile.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/mobile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/components/user-iam-customer-party.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/components/user-iam-customer-party.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/party/add-card-delivery-address.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/party/add-home-address.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/component-list-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/component-list-management.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/context-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/context-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/modal-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/senario-drawer-modal-management.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/scenario-drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/scenario-drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,16 +70,26 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/mysource/cbs/global-information",
-    "spring.configuration.checksum": "fdc3bdefb79cec8eb8211d2499e04704"
+    "last_opened_file_path": "/Users/rezasohbati/source/my-github/cbs/document/src/main/resources/scenarios/longbox",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "fdc3bdefb79cec8eb8211d2499e04704",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/scenarios/longbox" />
       <recent name="$PROJECT_DIR$/src/main/resources/components" />
+      <recent name="$PROJECT_DIR$/src/main/resources/scenarios" />
       <recent name="$PROJECT_DIR$/src/main/resources/microservices" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/microservices" />
@@ -104,6 +118,16 @@
       <workItem from="1669308817237" duration="47286000" />
       <workItem from="1670172445325" duration="12356000" />
       <workItem from="1670395273719" duration="12320000" />
+      <workItem from="1684560248977" duration="4650000" />
+      <workItem from="1684734322845" duration="36000" />
+      <workItem from="1684747608900" duration="1078000" />
+      <workItem from="1684748707778" duration="54000" />
+      <workItem from="1684748826596" duration="1184000" />
+      <workItem from="1684750028238" duration="105000" />
+      <workItem from="1684820112496" duration="2402000" />
+      <workItem from="1684826558416" duration="300000" />
+      <workItem from="1684959575549" duration="1035000" />
+      <workItem from="1685003230443" duration="12499000" />
     </task>
     <task id="LOCAL-00001" summary="add type to message and color message base on type">
       <created>1670103299142</created>

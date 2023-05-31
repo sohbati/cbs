@@ -1,0 +1,16 @@
+{
+    "components" : [
+      {
+        "type": "service",
+        "name": "FIXED_DEPOSIT",
+        "contextPath": "/fixed-deposit/",
+        "description" : "The service that provide money market and fixed deposit account opening",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/swagger-ui",
+        "gitInfoURI" : "/actuator/info",
+        "healthURI" : "/actuator/health",
+        "localhostPort": 8080
+      }
+    ]
+}
+  

@@ -27,7 +27,7 @@
     <!--websocket Interaction------------------------------------->
     <script src="/js/websocketInteraction.js"></script>
     <!-- D3   -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="/js/d3.min.js"></script>
     <!--component-context-menu-->
     <script src="/js/context-menu.js"></script>
     <link href="/css/component-context-menu.css" rel="stylesheet">
@@ -52,9 +52,9 @@
     <div style="width: 50%; margin: 0 auto;">
         <button class="button" onclick="websocketInteraction.callForScenarios()">Load Scenarios</button>
         <span style="width: 50px"></span>
-        <select id="environmentsList" style="margin-left: 40px">
+        <select  id="environmentsList" style="margin-left: 40px">
             <option value="http://localhost">Localhost service</option>
-            <option value="http://sit.server-domain.com:41233">SIT environment</option>
+            <option selected value="http://sit.sdb247.com:30080">SIT environment</option>
             <option value="http://uat.server-domain.com:101010">UAT service</option>
         </select>
     </div>

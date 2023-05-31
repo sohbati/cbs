@@ -1,0 +1,50 @@
+{
+    "name": "add-home-address",
+    "tip": "اضافه کردن آدرس   محل سکونت",
+    "description" : "/party-card-delivery address -- اضافه کردن محل سکونت  مشتری",
+    
+    "components" :[
+        "MOBILE","GATEWAY","MIB", "CMS", "ACCOUNT", "BLU-PARTY"
+    ],
+    "messages": [
+        {"uniqueId":1, "type":"REST", "start":0, "end": 1, "message": "call add home address from mobile",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "/openapi/v2/customers/update-address"
+            }
+        },
+
+        {"uniqueId":2, "type":"REST", "start":1, "end": 2, "message": "add home address from mobile",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "/openapi/v2/customers/update-address"
+            }
+        },
+
+        {"uniqueId":3, "type":"REST", "start":2, "end": 4, "message": "call account service to add address ",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "api/v2/customers/update-address"
+            }
+        },
+        {"uniqueId":4, "type":"REST", "start":4, "end": 5, "message": "inquiry previous address ",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "api/v1/client/{clientId}/addresses"
+            }
+        },
+        {"uniqueId":5, "type":"REST", "start":4, "end": 5, "message": "add if address is the first time adding ",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "api/v1/client/{clientId}/addresses?type={typeId}&tenantIdentifier={tenantIdentifier}&pretty=true"
+            }
+        },
+        {"uniqueId":6, "type":"REST", "start":4, "end": 5, "message": "update address in case of existence ",
+            "data" : {
+                "type": "api-link",
+                "apiURI": "api/v1/client/{clientId}/addresses"
+            }
+        }
+    ]
+
+}

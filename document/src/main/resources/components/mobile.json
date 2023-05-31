@@ -2,13 +2,24 @@
     "components" : [
       {
         "type": "service",
-        "name": "mib",
+        "name": "MIB",
         "contextPath": "/mib",
         "description" : "mobile backend",
         "iconURI": "/iconFile.icon",
-        "openApiURI": "/open-api",
+        "openApiURI": "/swagger-ui",
         "gitInfoURI" : "/info",
         "healthURI" : "/manage/health",
+        "localhostPort": 8082
+      },
+      {
+        "type": "service",
+        "name": "PFM",
+        "contextPath": "/pfm",
+        "description" : "mobile backend new service",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/swagger-ui",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/health",
         "localhostPort": 8082
       }
     ]

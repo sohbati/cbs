@@ -2,33 +2,26 @@
     "components" : [
       {
         "type": "actor",
-        "name": "financial-back-office",
-        "description" : "Lucy",
-        "descriptionUrl": "", 
-        "iconUrl": "[$name]-icon"
+        "name": "financial-back-office"
       },
       {
         "type": "actor",
-        "name": "help-desk-actor",
-        "description" : "Lucy",
-        "descriptionUrl": "",
-        "iconUrl": "[$name]-icon"
+        "name": "help-desk-actor"
       },
       {
         "type": "UI",
-        "name": "core-panel",
-        "description" : "UI",
-        "descriptionUrl": "",
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api"
+        "name": "core-panel"
       },
       {
-        "type": "UI",
-        "name": "crm-panel",
-        "description" : "UI",
-        "descriptionUrl": "",
-        "iconUrl": "[$name]-icon",
-        "openApiUrl": "[$name]/open-api"
+        "type": "gateway",
+        "name": "GATEWAY",
+        "contextPath": "/mib-apim3-gateway",
+        "description" :  "gateway",
+        "iconURI": "/iconFile.icon",
+        "openApiURI": "/",
+        "gitInfoURI" : "/info",
+        "healthURI" : "/health",
+        "localhostPort": 80
       }
     ]
 }
