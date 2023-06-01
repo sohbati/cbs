@@ -2,7 +2,15 @@ var scenarioListManagement = {
     list: [],
 
     addToList: function(scenarioStr) {
-      const scenario = JSON.parse(scenarioStr.body);
+        let scenario = null;
+        try {
+            scenario = JSON.parse(scenarioStr.body);
+        }catch (e) {
+            console.log("Error in parsing scenario json");
+            console.log(e);
+            return;
+        }
+
       const item = this.list.findIndex(element => {
           return element.name == scenario.name;
       });
@@ -39,6 +47,11 @@ var scenarioListManagement = {
         window.open(url, "_blank", "");
     },
 
+    showDocumentURL: function (component, scenario, message) {
+        const url = message.data.apiURI;
+        window.open(url, "_blank", "");
+    },
+
     showTextForMessageByMessageId: function (message) {
         alert(message.data.text);
     },
@@ -59,9 +72,11 @@ var scenarioListManagement = {
        const message = this.getMessage(scenario, messageId);
        switch (message.data.type) {
            case "api-link" :this.showOpenApiURLForMessageByMessageId(component, scenario, message);
-           break;
+             break;
+           case "document-link" :this.showDocumentURL(component, scenario, message);
+              break;
            case "text" : this.showTextForMessageByMessageId(message);
-           break;
+              break;
        }
     }
 }

@@ -18,14 +18,13 @@ var websocketInteraction = {
         this.stompClient = Stomp.over(socket);
         this.stompClient.connect({}, function (frame) {
             parent.setConnected(true);
-            console.log('Connected: ' + frame);
+            //console.log('Connected: ' + frame);
             parent.stompClient.subscribe('/topic/scenario', function (scenario) {
-                console.log(scenario);
+                //console.log(scenario);
                 scenarioListManagement.addToList(scenario);
-             //   showGreeting(JSON.parse(greeting.body).content);
             });
             parent.stompClient.subscribe('/topic/components', function (components) {
-                console.log(components);
+               // console.log(components);
                 componentListManagement.addToList(components);
             });
         });
@@ -36,7 +35,7 @@ var websocketInteraction = {
             this.stompClient.disconnect();
         }
         this.setConnected(false);
-        console.log("Disconnected");
+        //console.log("Disconnected");
     },
 
     callForScenarios() {

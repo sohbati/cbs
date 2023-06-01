@@ -23,7 +23,7 @@
 
         {"uniqueId":3, "type":"KAFKA", "start":0, "end": 1, "message": "fill form and click submit",
             "data" : {
-                "type": "text",
+                "type": "",
                 "text": ""
             }
         },

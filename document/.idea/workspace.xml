@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27769714-6ae3-438b-acd6-998844d02985" name="Changes" comment="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-closure.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-opening.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/inquiry-product-whatif-list.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/inquiry-product-whatif-list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-closure.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/longbox/longbox-account-closure.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scenarios/office/add-office.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/scenario-list-management.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/websocketInteraction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/websocketInteraction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +72,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "spring.configuration.checksum": "fdc3bdefb79cec8eb8211d2499e04704",
     "vue.rearranger.settings.migration": "true"
   }
@@ -117,7 +121,7 @@
       <workItem from="1684820112496" duration="2402000" />
       <workItem from="1684826558416" duration="300000" />
       <workItem from="1684959575549" duration="1035000" />
-      <workItem from="1685003230443" duration="14085000" />
+      <workItem from="1685003230443" duration="20183000" />
     </task>
     <task id="LOCAL-00001" summary="add type to message and color message base on type">
       <created>1670103299142</created>
@@ -140,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685566462713</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add some scenarios&#10;add home address&#10;add fixed-deposit whatif scenario&#10;add fixed-deposit account opennig scenario">
+      <created>1685567908412</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685567908412</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,5 +185,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

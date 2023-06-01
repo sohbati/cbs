@@ -1,32 +1,46 @@
 {
-    "name": "inquiry-fixed-deposit-whatif-list",
+    "name": "inquiry-(longbox)(fixed-deposit)-whatif-list",
     "tip": "فراخوانی لیست محصول ها و مبالغ قابل انتخاب مشتری",
-    "description" : "longbox-fixed deposit whatif فراخوانی لیست محصول ها و مبالغ قابل انتخاب مشتری",
-    
-    "components" :[
-        "MOBILE","GATEWAY","PFM", "FIXED_DEPOSIT"
+    "description": "longbox-fixed deposit whatif فراخوانی لیست محصول ها و مبالغ قابل انتخاب مشتری",
+    "components": [
+        "MOBILE",
+        "GATEWAY",
+        "PFM",
+        "FIXED_DEPOSIT"
     ],
     "messages": [
-        {"uniqueId":1, "type":"REST", "start":0, "end": 1, "message": "درخواست لیست وات ایف - هنوز پیاده سازی نشده",
-            "data" : {
+        {
+            "uniqueId": 1,
+            "type": "REST",
+            "start": 0,
+            "end": 1,
+            "message": "درخواست لیست وات ایف - هنوز پیاده سازی نشده",
+            "data": {
                 "type": "api-link",
-                "apiURI": "??"
+                "apiURI": "empty"
             }
         },
-
-        {"uniqueId":2, "type":"REST", "start":1, "end": 2, "message": "درخواست لیست وات ایف - هنوز پیاده سازی نشده",
-            "data" : {
+        {
+            "uniqueId": 2,
+            "type": "REST",
+            "start": 1,
+            "end": 2,
+            "message": "درخواست لیست وات ایف - هنوز پیاده سازی نشده",
+            "data": {
                 "type": "api-link",
-                "apiURI": ""
+                "apiURI": "empty"
             }
         },
-
-        {"uniqueId":3, "type":"REST", "start":2, "end": 3, "message": "get long term whatif list ",
-            "data" : {
-                "type": "api-link",
-                "apiURI": "api/v1/products/whatif"
+        {
+            "uniqueId": 3,
+            "type": "REST",
+            "start": 2,
+            "end": 3,
+            "message": "get long term what if list ",
+            "data": {
+                "type": "document-link",
+                "apiURI": "https:\/\/confluence.sdb247.com\/display\/CBSCORE\/API+Design#product_list_whatif"
             }
         }
     ]
-
 }
